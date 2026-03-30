@@ -1,0 +1,1 @@
+# [Functional Core] Pure Domain Logic, Entities, Interfaces

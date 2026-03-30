@@ -1,0 +1,30 @@
+# Security (NEVER commit these)
+.env
+.env.local
+
+# Python / Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# IDE Settings (PyCharm/VSCode)
+.idea/
+.vscode/
+
+# Distribution / Builds
+dist/
+build/
+*.egg-info/
+
+# Logs
+*.log
+
+# System
+.DS_Store
+Thumbs.db

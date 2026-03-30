@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "supportsphere-ai"
+version = "1.0.0"
+description = "AI Support Agent SRS Implementation"
+authors = ["kietdg"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.109.0"
+uvicorn = "^0.27.0"
+pydantic = "^2.6.0"
+pydantic-settings = "^2.1.0"
+sqlalchemy = "^2.0.25"
+psycopg = {extras = ["binary", "pool"], version = "^3.1.17"}
+pgvector = "^0.2.4"
+openai = "^1.12.0"           # For GPT-4o-mini
+google-generativeai = "^0.3" # For Gemini Embeddings
+python-multipart = "^0.0.9"  # For file uploads
+dependency-injector = "^4.41.0" # Robust IoC framework for Python
+pypdf = "^6.3.0"
+beautifulsoup4 = "^4.14.2"
+requests = "^2.32.5"
+tqdm = "^4.67.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
