@@ -7,14 +7,12 @@ class LlmApiConfig(BaseSettings):
     Configuration object for LLM Client.
     Matches SRS Class Diagram: HttpLlmClient dependency.
     """
-    api_endpoint_url: str = "https://api.openai.com/v1/chat/completions"  # Default for OpenAI
-    api_key: str = Field(alias="OPENAI_API_KEY")
-    model_name: str = "gpt-4o-mini"
+    model_name: str = "gemini-3-flash-preview"
 
     # Additional config for Embedding (Gemini)
     embedding_api_key: str = Field(alias="GOOGLE_API_KEY")
-    embedding_model_name: str = "models/gemini-embedding-exp-03-07"
-    embedding_dimension: int = 3072  # Gemini uses 768 dimensions
+    embedding_model_name: str = "gemini-embedding-001"
+    embedding_dimension: int = 3072  # gemini-embedding-001 uses 3072 dimensions
     chunk_size: int = 1000
     chunk_overlap: int = 100
     # Database
