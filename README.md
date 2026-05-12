@@ -6,7 +6,7 @@ This repository contains the backend for **SupportSphere AI**, a RAG-powered Tie
 
 *   **Docker Desktop** (for the database)
 *   **Python 3.10+**
-*   **API Keys** (You will need valid keys for `OPENAI_API_KEY` and `GOOGLE_API_KEY`)
+*   **API Keys** (You will need a valid key for `GOOGLE_API_KEY`)
 
 ## 🚀 Quick Start (Local Setup)
 
@@ -19,7 +19,6 @@ cp .env.example .env
 ```
 **Important:** Update `.env` with your actual API keys:
 ```ini
-OPENAI_API_KEY=sk-...
 GOOGLE_API_KEY=AIza...
 ```
 

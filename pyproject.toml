@@ -2,7 +2,7 @@
 name = "supportsphere-ai"
 version = "1.0.0"
 description = "AI Support Agent SRS Implementation"
-authors = ["kietdg"]
+authors = ["tuedz"]
 package-mode = false
 
 [tool.poetry.dependencies]
@@ -14,7 +14,6 @@ pydantic-settings = "^2.1.0"
 sqlalchemy = "^2.0.25"
 psycopg = {extras = ["binary", "pool"], version = "^3.1.17"}
 pgvector = "^0.2.4"
-openai = "^1.12.0"           # For GPT-4o-mini
 google-generativeai = "^0.3" # For Gemini Embeddings
 python-multipart = "^0.0.9"  # For file uploads
 dependency-injector = "^4.41.0" # Robust IoC framework for Python
