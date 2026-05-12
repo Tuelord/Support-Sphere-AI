@@ -1,27 +1,29 @@
-[tool.poetry]
+[project]
 name = "supportsphere-ai"
 version = "1.0.0"
 description = "AI Support Agent SRS Implementation"
-authors = ["tuedz"]
-package-mode = false
-
-[tool.poetry.dependencies]
-python = "^3.10"
-fastapi = "^0.109.0"
-uvicorn = "^0.27.0"
-pydantic = "^2.6.0"
-pydantic-settings = "^2.1.0"
-sqlalchemy = "^2.0.25"
-psycopg = {extras = ["binary", "pool"], version = "^3.1.17"}
-pgvector = "^0.2.4"
-google-generativeai = "^0.3" # For Gemini Embeddings
-python-multipart = "^0.0.9"  # For file uploads
-dependency-injector = "^4.41.0" # Robust IoC framework for Python
-pypdf = "^6.3.0"
-beautifulsoup4 = "^4.14.2"
-requests = "^2.32.5"
-tqdm = "^4.67.1"
+authors = [{name = "tuedz"}]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn>=0.27.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.1.0",
+    "sqlalchemy>=2.0.25",
+    "psycopg[binary,pool]>=3.1.17",
+    "pgvector>=0.2.4",
+    "google-genai>=1.0.0",
+    "python-multipart>=0.0.9",
+    "dependency-injector>=4.41.0",
+    "pypdf>=6.3.0",
+    "beautifulsoup4>=4.14.2",
+    "requests>=2.32.5",
+    "tqdm>=4.67.1",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]

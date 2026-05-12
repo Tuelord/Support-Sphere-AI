@@ -29,27 +29,24 @@ docker-compose up -d
 ```
 
 ### 3. Install Dependencies
-If you have `poetry` installed:
+Using Astral's `uv` (Fast Python Package Installer):
 ```bash
-poetry install
+uv sync
 ```
-Or using standard `pip`:
-```bash
-pip install -r requirements.txt
-```
+*(This will automatically create a virtual environment and install all dependencies)*
 *(Note: If `requirements.txt` is missing, generate it via `poetry export -f requirements.txt --output requirements.txt`)*
 
 ### 4. Ingest Test Data (Crucial!)
 The AI starts with an empty brain. You must ingest data so it has something to answer with. Run this command to scrape a Wikipedia page into the `tech_support` knowledge base:
 
 ```bash
-python -m app.interface.cli.ingest --source "https://en.wikipedia.org/wiki/Artificial_intelligence" --kb "tech_support"
+uv run python -m app.interface.cli.ingest --source "https://en.wikipedia.org/wiki/Artificial_intelligence" --kb "tech_support"
 ```
 
 ### 5. Run the Server
 Start the API server:
 ```bash
-python main.py
+uv run main.py
 ```
 The API will be available at: `http://localhost:8000`
 
