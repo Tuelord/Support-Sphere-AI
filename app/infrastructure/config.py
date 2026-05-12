@@ -16,7 +16,7 @@ class LlmApiConfig(BaseSettings):
     chunk_size: int = 1000
     chunk_overlap: int = 100
     # Database
-    database_url: str = "postgresql+psycopg://admin:secretpassword@localhost:5432/supportsphere"
+    database_url: str = "postgresql+psycopg://admin:secretpassword@localhost:5433/supportsphere"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
